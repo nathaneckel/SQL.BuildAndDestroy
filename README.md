@@ -7,40 +7,49 @@ Given the scenarios, add the the directed queries to the "answers" directory's f
 Write the correct SQL statement to create a new database called **myNewDB**.
 
 *(Add your query to the file exercise1.sql)*
+mysql> CREATE SCHEMA myNewDB;
 
 ## Deleting databases
 
 Write the correct SQL statement to delete a database named **myNewDB**.
 
 *(Add your query to the file exercise2.sql)*
+DROP SCHEMA myNewDB;
 
 ## Creating tables
 
 Write the correct SQL statement to create a new table called **Users**, with an int field called **UserID**, and the following varchar fields of size 255: **LastName, FirstName, Address, City**
 
 *(Add your query to the file exercise3.sql)*
+CREATE TABLE myNewDB.Users ( UserID int, LastName varchar(255), FirstName varchar(255), Address varchar(255), City varchar(255) );
 
 ## Deleting tables
 
 Write the correct SQL statement to delete a table called **Users**.
 
 *(Add your query to the file exercise4.sql)*
+mysql> DROP TABLE myNewDB.Users;
 
 
 Use the **TRUNCATE** statement to delete all data inside the **Users** table.
 
 *(Add your query to the file exercise5.sql)*
+mysql> TRUNCATE myNewDB.Users;
 
 ## Altering tables
 
 Add a column of type **DATE** called **Birthday** to the **Users** table.
 
 *(Add your query to the file exercise6.sql)*
+ALTER TABLE myNewDB.Users
+    -> ADD Birthday DATE;
 
 Delete the column **Birthday** from the **Users** table.
 
 *(Add your query to the file exercise7.sql)*
-  
+  ALTER TABLE myNewDB.Users
+    -> DROP COLUMN Birthday;
+
 
 ## Inserting records
 

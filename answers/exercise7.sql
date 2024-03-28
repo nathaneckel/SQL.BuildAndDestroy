@@ -1,0 +1,1 @@
+ALTER TABLE myNewDB2.Users DROP COLUMN Birthday;
